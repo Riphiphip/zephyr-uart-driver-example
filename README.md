@@ -1,1 +1,1 @@
-# zephyr-uart-driver-example
+# Zephyr uart peripheral driver 
