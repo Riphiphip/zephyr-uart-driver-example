@@ -1,0 +1,19 @@
+description: |
+  UART peripheral example. Transmits data over uart on button press
+  and accumulates recieved data as strings.
+
+compatible: "riphiphip,uart_peripheral"
+
+include: uart-device.yaml
+
+properties:
+  button-gpios:
+    required: true
+    type: phandle-array
+    description: |
+      GPIO pin used to trigger data transmission.
+  initial-string:
+    required: true
+    type: string
+    description: |
+      Initial string to be sent over uart. Can be changed during run-time.
