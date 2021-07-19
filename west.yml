@@ -14,3 +14,6 @@ manifest:
       path: zephyr
       revision: v2.6.0
       import: true
+
+  self:
+    path: uart-driver-example
