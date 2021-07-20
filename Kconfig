@@ -1,0 +1,11 @@
+menu "UART peripheral driver example"
+rsource "drivers/Kconfig"
+endmenu
+
+menu "Zephyr Kernel"
+source "Kconfig.zephyr"
+endmenu
+
+module = APPLICATION_MODULE
+module-str = Application module
+source "subsys/logging/Kconfig.template.log_config"
