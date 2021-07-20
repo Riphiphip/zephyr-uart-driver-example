@@ -2,7 +2,7 @@ description: |
   UART peripheral example. Transmits data over uart on button press
   and accumulates recieved data as strings.
 
-compatible: "riphiphip,uart_peripheral"
+compatible: "riphiphip,my_uart_peripheral"
 
 include: uart-device.yaml
 
@@ -13,7 +13,7 @@ properties:
     description: |
       GPIO pin used to trigger data transmission.
   initial-string:
-    required: true
+    required: false
     type: string
     description: |
       Initial string to be sent over uart. Can be changed during run-time.
