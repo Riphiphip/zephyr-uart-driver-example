@@ -21,7 +21,7 @@ void peripheral_callback(const struct device *dev, char *data, size_t length, bo
         printk("Recieved string \"%s\"\n", data);
         c->strings++;
     } else {
-        printk("Buffer full. Recieved fragment %.*s", length, data);
+        printk("Buffer full. Recieved fragment %.*s\n", length, data);
         c->overflows++;
     }
     printk("Strings: %d\nOverflows: %d\n", c->strings, c->overflows);
