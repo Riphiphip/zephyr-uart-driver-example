@@ -213,7 +213,7 @@ static int init_my_uart_peripheral(const struct device *dev)
         .data = &my_uart_peripheral_data_##inst,                  \
         .uart_dev = DEVICE_DT_GET(DT_INST_BUS(inst)),             \
         .gpio_spec = GPIO_DT_SPEC_INST_GET(inst, button_gpios),   \
-        .gpio_cb = {0},                                           \
+        .gpio_cb = {{0}},                                         \
     };                                                            \
     DEVICE_DT_INST_DEFINE(inst,                                   \
                           init_my_uart_peripheral,                \
