@@ -7,7 +7,7 @@
         compatible = "riphiphip,my_uart_peripheral";
         status="okay";
         label = "my_uart_peripheral0";
-        button-gpios = <&gpio0 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        button-gpios = <&gpio0 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // Button 1 on dk
         initial-string = "Hello, World!";
     };
 };
