@@ -1,0 +1,26 @@
+menu "My uart peripheral"
+config MY_UART_PERIPHERAL
+    bool "Enable my uart peripheral"
+    depends on UART_INTERRUPT_DRIVEN && GPIO
+
+if MY_UART_PERIPHERAL
+
+    config MY_UART_PERIPHERAL_RX_BUF_SIZE
+        int "rx buffer size (bytes)"
+        default 64
+        range 0 2047
+        help
+            Size of uart rx buffer. Will be allocated for each device.
+
+    config MY_UART_PERIPHERAL_MAX_STR_LEN
+        int "Maximum string length"
+        default 64
+        range 0 2047
+        help
+            Maximum length of string that can be transmitted by device. A buffer capable of containing that string will be allocated for each device.
+    
+    module = MY_UART_PERIPHERAL
+    module-str = My uart peripheral
+    source "subsys/logging/Kconfig.template.log_config"
+endif
+endmenu
