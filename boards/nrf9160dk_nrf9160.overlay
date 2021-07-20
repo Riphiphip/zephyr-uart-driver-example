@@ -1,0 +1,13 @@
+
+&uart1 {
+    status="okay";
+    rx-pin = < 10 >;
+    tx-pin = < 11 >;
+    my_device: my_uart_peripheral0 {
+        compatible = "riphiphip,my_uart_peripheral";
+        status="okay";
+        label = "my_uart_peripheral0";
+        button-gpios = <&gpio0 8 GPIO_ACTIVE_HIGH>;
+        initial-string = "Hello, World!";
+    };
+};
