@@ -23,7 +23,7 @@ This project currently supports the following boards out of the box:
 
 3. Install project by running the following commands from your project directory. This will download the project and any dependencies.
 ```sh
-west init -m https://github.com/Riphiphipzephyr-uart-driver-example
+west init -m https://github.com/Riphiphip/zephyr-uart-driver-example
 west update
 ```
 
