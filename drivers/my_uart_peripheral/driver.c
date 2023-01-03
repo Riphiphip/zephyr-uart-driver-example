@@ -195,7 +195,7 @@ static int init_my_uart_peripheral(const struct device *dev)
     }
     if (init_gpio(dev))
     {
-        __ASSERT(false, "Failed to initialize GPIO device.")
+        __ASSERT(false, "Failed to initialize GPIO device.");
         return -ENODEV;
     }
     LOG_DBG("My UART peripheral initialized");
